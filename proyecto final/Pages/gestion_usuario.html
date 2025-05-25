@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../Assests/Img/favicon.png" type="image/png"/>
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../Assests/Styles/usuarios.css" />
+</head>
+<body>
+  <div class="admin-panel">
+    <h1>Gestión de Usuarios</h1>
+
+    <!-- Formulario de Agregar Usuario o Editar Usuario -->
+    <form id="usuario-form">
+      <input type="text" id="idUsuario" placeholder="ID Usuario" required />
+      <input type="text" id="nombre" placeholder="Nombre Completo" required />
+      <input type="email" id="correo" placeholder="Correo Electrónico" required />
+
+      <select id="rol" required>
+        <option value="">Seleccione Rol</option>
+        <option value="Administrador">Administrador</option>
+        <option value="Empleado">Empleado</option>
+      </select>
+
+      <select id="estado" required>
+        <option value="Activo">Activo</option>
+        <option value="Inactivo">Inactivo</option>
+      </select>
+
+      <button type="submit" class="btn btn-custom">Agregar Usuario</button>
+      <button type="button" class="btn btn-custom" id="cancel-edit" style="display:none;" onclick="cancelEdit()">Cancelar Edición</button>
+    </form>
+
+    <!-- Barra de Búsqueda -->
+    <input type="text" id="search" placeholder="Buscar Usuario" class="search-bar" onkeyup="searchUser()" />
+
+    <!-- Tabla de Usuarios -->
+    <table id="tabla-usuarios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Botón Volver -->
+    <button class="btn btn-custom btn-volver" onclick="window.location.href='admin.html'">Volver</button>
+  </div>
+
+  <script src="../Assests/Scripts/usuarios.js"></script>
+</body>
+</html>

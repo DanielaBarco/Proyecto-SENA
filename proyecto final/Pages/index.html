@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Login Inventario CBC Decoración"/>
+  <title>Login - Inventario CBC</title>
+
+  <!-- Favicon del sitio -->
+  <link rel="icon" href="../Assests/Img/favicon.png" type="image/png"/>
+
+  <!-- Bootstrap CSS para estilos base y componentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../Assests/Styles/style.css"/> 
+</head>
+<body>
+
+  <!-- Contenedor principal del formulario de login -->
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        
+
+
+        <div class="card p-4 shadow">
+          <h2 class="text-center mb-4">Inicio de Sesión</h2>
+
+          <!-- Formulario de inicio de sesión -->
+          <form id="loginForm">
+            <!-- Selección de tipo de usuario -->
+            <div class="mb-3">
+              <label for="tipoUsuario" class="form-label">Tipo de Usuario</label>
+              <select class="form-select" id="tipoUsuario" required>
+                <option value="" disabled selected>Elija su rol</option>
+                <option value="administrador" style="color: black;">Administrador</option>
+                <option value="empleado" style="color: black;">Empleado</option>
+              </select>
+            </div>
+
+            <!-- Campo para el nombre de usuario -->
+            <div class="mb-3">
+              <label for="nombreUsuario" class="form-label">Usuario</label>
+              <input type="text" class="form-control" id="nombreUsuario" required placeholder="Nombre de Usuario" />
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <div class="mb-3">
+              <label for="contrasena" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contrasena" required placeholder="Contraseña"/>
+            </div>
+
+            <!-- Botón de envío del formulario -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+          </form>
+
+          <!-- Enlace para redirigir a registro -->
+          <div class="text-center mt-3">
+            <a href="#" onclick="mostrarCrearCuenta()">¿No tienes una cuenta? Regístrate</a>
+          </div>
+
+          <!-- Pestaña adhesivo que aparece solo si se hace clic en "Registrarse" -->
+          <div id="mensajeContacto" class="alert alert-info text-center mt-3" style="display: none;">
+            <strong>¿Nuevo en la plataforma?</strong><br>
+            Comuníquese con uno de los administradores para obtener acceso a la plataforma.<br>
+            <strong>Contacto:</strong> +57 123 456 789
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script principal del login -->
+  <script src="../Assests/Scripts/login.js"></script>
+  
+  <!-- Script para mostrar el mensaje de contacto cuando se haga clic en "Registrarse" -->
+  <script>
+    function mostrarCrearCuenta() {
+      document.getElementById('mensajeContacto').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

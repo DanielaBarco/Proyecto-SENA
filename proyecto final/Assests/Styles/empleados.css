@@ -1,0 +1,117 @@
+/* Fondo animado degradado */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #1abc9c, #16a085, #2c3e50, #34495e);
+    background-size: 400% 400%;
+    animation: moverFondo 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Animación del fondo */
+  @keyframes moverFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Contenedor principal */
+  .inventory-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  /* Botón de regreso */
+  .btn-back {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(26, 188, 156, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-back:hover {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+    transform: scale(1.05);
+  }
+  
+  /* Sección de inventario */
+  .inventory-actions {
+    margin-top: 40px;
+    background: #34495e;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 15px;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Campos solo lectura */
+  .inventory-actions label,
+  .inventory-actions select,
+  .inventory-actions input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+  }
+  
+  /* Marcar los campos como no editables */
+  .inventory-actions input[disabled],
+  .inventory-actions select[disabled] {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+  }
+  
+  /* Oculta botones de acción si es necesario */
+  .inventory-actions button {
+    display: none;
+  }
+  
+  /* Indicador de modo empleado */
+  .notice-restricted {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #f1c40f;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  

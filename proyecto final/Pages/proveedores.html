@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../Assests/Img/favicon.png" type="image/png"/>
+  <title>Proveedores - CBC</title>
+  <link rel="stylesheet" href="../Assests/Styles/proveedores.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Proveedores</h1>
+
+    <form id="formulario-proveedor">
+      <input type="text" id="id" placeholder="ID Proveedor" required />
+      <input type="text" id="empresa" placeholder="Nombre de la Empresa" required />
+      <input type="text" id="contacto" placeholder="Nombre de Contacto" required />
+      <input type="tel" id="telefono" placeholder="Teléfono" required />
+      <input type="text" id="cuenta" placeholder="Cuenta" required />
+      <button type="submit">Agregar proveedor</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Empresa</th>
+          <th>Contacto</th>
+          <th>Teléfono</th>
+          <th>Cuenta</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-proveedores"></tbody>
+    </table>
+
+    <button class="volver-btn" onclick="window.location.href='admin.html'">← Volver al Panel</button>
+  </div>
+
+  <script src="../Assests/Scripts/proveedores.js"></script>
+</body>
+</html>

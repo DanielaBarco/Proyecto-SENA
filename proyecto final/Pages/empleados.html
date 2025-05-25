@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Assests/Img/favicon.png" type="image/png"/>
+    <title>Panel de Empleados - Inventario</title>
+
+    <link rel="stylesheet" href="../Assests/Styles/empleados.css"> <!-- si aplicas estilos exclusivos -->
+</head>
+<body>
+    <header>
+        <h1>Panel de Empleados</h1>
+        <p>Acceso limitado: Solo inventario</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Inventario Disponible</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí va el contenido dinámico desde la base de datos -->
+                    <tr>
+                        <td>001</td>
+                        <td>Lavamanos</td>
+                        <td>15</td>
+                        <td>Bodega 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <small>© 2025 Panel de empleados - Acceso restringido</small>
+    </footer>
+
+    <script src="../Assests/Scripts/empleados.js"></script> <!-- si aplicas validaciones JS -->
+</body>
+</html>
